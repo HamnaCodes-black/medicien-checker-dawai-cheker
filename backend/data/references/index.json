@@ -1,0 +1,117 @@
+{
+  "demo": true,
+  "notice": "DEMO DATA — not real medicine registrations",
+  "seeded_at": "2026-10-19T13:14:08.998541+00:00",
+  "references": [
+    {
+      "id": "fevra-plus",
+      "name": "Fevra+",
+      "aliases": [
+        "Fevra Plus"
+      ],
+      "strength": "500 mg",
+      "manufacturer": "Northstar Pharma (Pvt) Ltd",
+      "reg_no": "DEMO-REG-1001",
+      "reg_regex": "^DEMO-REG-\\d{4}$",
+      "batch_regex": "^DEMO-FV-\\d{4}-[A-Z]\\d{2}$",
+      "barcode": "2001001000011",
+      "barcode_prefix": "2001001",
+      "color_hex": "#0F766E",
+      "demo": true,
+      "images": {
+        "front": "demo/fevra-plus/front.png",
+        "back": "demo/fevra-plus/back.png",
+        "batch": "demo/fevra-plus/batch.png"
+      },
+      "seeded_from": "demo_data/manifest.json"
+    },
+    {
+      "id": "coughcalm",
+      "name": "CoughCalm",
+      "aliases": [
+        "Cough Calm"
+      ],
+      "strength": "120 ml",
+      "manufacturer": "Cedar Labs (Pvt) Ltd",
+      "reg_no": "DEMO-REG-1002",
+      "reg_regex": "^DEMO-REG-\\d{4}$",
+      "batch_regex": "^DEMO-CC-\\d{4}-[A-Z]\\d{2}$",
+      "barcode": "2002002000024",
+      "barcode_prefix": "2002002",
+      "color_hex": "#B45309",
+      "demo": true,
+      "images": {
+        "front": "demo/coughcalm/front.png",
+        "back": "demo/coughcalm/back.png",
+        "batch": "demo/coughcalm/batch.png"
+      },
+      "seeded_from": "demo_data/manifest.json"
+    },
+    {
+      "id": "glucobalance",
+      "name": "GlucoBalance",
+      "aliases": [
+        "Gluco Balance"
+      ],
+      "strength": "850 mg",
+      "manufacturer": "Indus Bio Pharma (Pvt) Ltd",
+      "reg_no": "DEMO-REG-1003",
+      "reg_regex": "^DEMO-REG-\\d{4}$",
+      "batch_regex": "^DEMO-GB-\\d{4}-[A-Z]\\d{2}$",
+      "barcode": "2003003000037",
+      "barcode_prefix": "2003003",
+      "color_hex": "#4338CA",
+      "demo": true,
+      "images": {
+        "front": "demo/glucobalance/front.png",
+        "back": "demo/glucobalance/back.png",
+        "batch": "demo/glucobalance/batch.png"
+      },
+      "seeded_from": "demo_data/manifest.json"
+    },
+    {
+      "id": "allerfree",
+      "name": "AllerFree",
+      "aliases": [
+        "Aller Free"
+      ],
+      "strength": "10 mg",
+      "manufacturer": "Meridian Healthcare (Pvt) Ltd",
+      "reg_no": "DEMO-REG-1004",
+      "reg_regex": "^DEMO-REG-\\d{4}$",
+      "batch_regex": "^DEMO-AF-\\d{4}-[A-Z]\\d{2}$",
+      "barcode": "2004004000040",
+      "barcode_prefix": "2004004",
+      "color_hex": "#C2410C",
+      "demo": true,
+      "images": {
+        "front": "demo/allerfree/front.png",
+        "back": "demo/allerfree/back.png",
+        "batch": "demo/allerfree/batch.png"
+      },
+      "seeded_from": "demo_data/manifest.json"
+    },
+    {
+      "id": "cardiosafe",
+      "name": "CardioSafe",
+      "aliases": [
+        "Cardio Safe"
+      ],
+      "strength": "5 mg",
+      "manufacturer": "Apex Formulations (Pvt) Ltd",
+      "reg_no": "DEMO-REG-1005",
+      "reg_regex": "^DEMO-REG-\\d{4}$",
+      "batch_regex": "^DEMO-CS-\\d{4}-[A-Z]\\d{2}$",
+      "barcode": "2005005000053",
+      "barcode_prefix": "2005005",
+      "color_hex": "#BE123C",
+      "demo": true,
+      "images": {
+        "front": "demo/cardiosafe/front.png",
+        "back": "demo/cardiosafe/back.png",
+        "batch": "demo/cardiosafe/batch.png"
+      },
+      "seeded_from": "demo_data/manifest.json"
+    }
+  ]
+}

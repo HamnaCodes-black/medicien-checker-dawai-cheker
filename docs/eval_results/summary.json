@@ -1,0 +1,30 @@
+{
+  "dataset": "SYNTHETIC demo data only",
+  "cases": 20,
+  "tampered_cases": 15,
+  "authentic_cases": 5,
+  "true_positive": 15,
+  "false_negative": 0,
+  "false_positive": 0,
+  "true_negative": 5,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "accuracy_detection": 1.0,
+  "authentic_looks_consistent_rate": 1.0,
+  "verdict_matrix": {
+    "suspicious": {
+      "consistent": 0,
+      "suspicious": 15,
+      "undetermined": 0
+    },
+    "consistent": {
+      "consistent": 5,
+      "suspicious": 0,
+      "undetermined": 0
+    }
+  },
+  "mean_processing_seconds": 11.28,
+  "total_seconds": 226.3,
+  "note": "These results are on synthetic generated images. They say nothing about real-world accuracy. 'Undetermined' is counted as not flagged when computing recall."
+}

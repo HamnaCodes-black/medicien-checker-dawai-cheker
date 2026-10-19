@@ -1,0 +1,420 @@
+{
+  "dataset": "DawaiCheck synthetic demo dataset",
+  "notice": "DEMO DATA — all products, manufacturers and registration numbers are fictional. These images were generated for software testing and are not real medicine packaging or real DRAP registrations.",
+  "generated_at": "2026-10-19T13:02:11.811545+00:00",
+  "source": "scripts/generate_demo_data.py",
+  "references": [
+    {
+      "id": "fevra-plus",
+      "name": "Fevra+",
+      "aliases": [
+        "Fevra Plus"
+      ],
+      "strength": "500 mg",
+      "manufacturer": "Northstar Pharma (Pvt) Ltd",
+      "reg_no": "DEMO-REG-1001",
+      "reg_regex": "^DEMO-REG-\\d{4}$",
+      "batch_regex": "^DEMO-FV-\\d{4}-[A-Z]\\d{2}$",
+      "barcode": "2001001000011",
+      "barcode_prefix": "2001001",
+      "color_hex": "#0F766E",
+      "demo": true,
+      "images": {
+        "front": "reference/fevra-plus/front.png",
+        "back": "reference/fevra-plus/back.png",
+        "batch": "reference/fevra-plus/batch.png"
+      }
+    },
+    {
+      "id": "coughcalm",
+      "name": "CoughCalm",
+      "aliases": [
+        "Cough Calm"
+      ],
+      "strength": "120 ml",
+      "manufacturer": "Cedar Labs (Pvt) Ltd",
+      "reg_no": "DEMO-REG-1002",
+      "reg_regex": "^DEMO-REG-\\d{4}$",
+      "batch_regex": "^DEMO-CC-\\d{4}-[A-Z]\\d{2}$",
+      "barcode": "2002002000024",
+      "barcode_prefix": "2002002",
+      "color_hex": "#B45309",
+      "demo": true,
+      "images": {
+        "front": "reference/coughcalm/front.png",
+        "back": "reference/coughcalm/back.png",
+        "batch": "reference/coughcalm/batch.png"
+      }
+    },
+    {
+      "id": "glucobalance",
+      "name": "GlucoBalance",
+      "aliases": [
+        "Gluco Balance"
+      ],
+      "strength": "850 mg",
+      "manufacturer": "Indus Bio Pharma (Pvt) Ltd",
+      "reg_no": "DEMO-REG-1003",
+      "reg_regex": "^DEMO-REG-\\d{4}$",
+      "batch_regex": "^DEMO-GB-\\d{4}-[A-Z]\\d{2}$",
+      "barcode": "2003003000037",
+      "barcode_prefix": "2003003",
+      "color_hex": "#4338CA",
+      "demo": true,
+      "images": {
+        "front": "reference/glucobalance/front.png",
+        "back": "reference/glucobalance/back.png",
+        "batch": "reference/glucobalance/batch.png"
+      }
+    },
+    {
+      "id": "allerfree",
+      "name": "AllerFree",
+      "aliases": [
+        "Aller Free"
+      ],
+      "strength": "10 mg",
+      "manufacturer": "Meridian Healthcare (Pvt) Ltd",
+      "reg_no": "DEMO-REG-1004",
+      "reg_regex": "^DEMO-REG-\\d{4}$",
+      "batch_regex": "^DEMO-AF-\\d{4}-[A-Z]\\d{2}$",
+      "barcode": "2004004000040",
+      "barcode_prefix": "2004004",
+      "color_hex": "#C2410C",
+      "demo": true,
+      "images": {
+        "front": "reference/allerfree/front.png",
+        "back": "reference/allerfree/back.png",
+        "batch": "reference/allerfree/batch.png"
+      }
+    },
+    {
+      "id": "cardiosafe",
+      "name": "CardioSafe",
+      "aliases": [
+        "Cardio Safe"
+      ],
+      "strength": "5 mg",
+      "manufacturer": "Apex Formulations (Pvt) Ltd",
+      "reg_no": "DEMO-REG-1005",
+      "reg_regex": "^DEMO-REG-\\d{4}$",
+      "batch_regex": "^DEMO-CS-\\d{4}-[A-Z]\\d{2}$",
+      "barcode": "2005005000053",
+      "barcode_prefix": "2005005",
+      "color_hex": "#BE123C",
+      "demo": true,
+      "images": {
+        "front": "reference/cardiosafe/front.png",
+        "back": "reference/cardiosafe/back.png",
+        "batch": "reference/cardiosafe/batch.png"
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "fevra-plus__authentic",
+      "product_id": "fevra-plus",
+      "variant": "authentic",
+      "tamper_type": null,
+      "expected_verdict": "consistent",
+      "reference_image": "fevra-plus",
+      "images": {
+        "front": "reference/fevra-plus/front.png",
+        "back": "reference/fevra-plus/back.png",
+        "batch": "reference/fevra-plus/batch.png"
+      }
+    },
+    {
+      "id": "fevra-plus__wrong-color",
+      "product_id": "fevra-plus",
+      "variant": "wrong-color",
+      "tamper_type": "wrong_colour",
+      "expected_verdict": "suspicious",
+      "reference_image": "fevra-plus",
+      "mutation": {
+        "color": "#6D28D9"
+      },
+      "images": {
+        "front": "tampered/fevra-plus__wrong-color/front.png",
+        "back": "tampered/fevra-plus__wrong-color/back.png",
+        "batch": "tampered/fevra-plus__wrong-color/batch.png"
+      }
+    },
+    {
+      "id": "fevra-plus__typo-name",
+      "product_id": "fevra-plus",
+      "variant": "typo-name",
+      "tamper_type": "typo_in_brand_name",
+      "expected_verdict": "suspicious",
+      "reference_image": "fevra-plus",
+      "mutation": {
+        "display_name": "Fevrraa+"
+      },
+      "images": {
+        "front": "tampered/fevra-plus__typo-name/front.png",
+        "back": "tampered/fevra-plus__typo-name/back.png",
+        "batch": "tampered/fevra-plus__typo-name/batch.png"
+      }
+    },
+    {
+      "id": "fevra-plus__expired-date",
+      "product_id": "fevra-plus",
+      "variant": "expired-date",
+      "tamper_type": "expired_date",
+      "expected_verdict": "suspicious",
+      "reference_image": "fevra-plus",
+      "mutation": {
+        "exp": "01/2024"
+      },
+      "images": {
+        "front": "tampered/fevra-plus__expired-date/front.png",
+        "back": "tampered/fevra-plus__expired-date/back.png",
+        "batch": "tampered/fevra-plus__expired-date/batch.png"
+      }
+    },
+    {
+      "id": "coughcalm__authentic",
+      "product_id": "coughcalm",
+      "variant": "authentic",
+      "tamper_type": null,
+      "expected_verdict": "consistent",
+      "reference_image": "coughcalm",
+      "images": {
+        "front": "reference/coughcalm/front.png",
+        "back": "reference/coughcalm/back.png",
+        "batch": "reference/coughcalm/batch.png"
+      }
+    },
+    {
+      "id": "coughcalm__blurry-text",
+      "product_id": "coughcalm",
+      "variant": "blurry-text",
+      "tamper_type": "blurry_print",
+      "expected_verdict": "suspicious",
+      "reference_image": "coughcalm",
+      "mutation": {
+        "blur": 1.7
+      },
+      "images": {
+        "front": "tampered/coughcalm__blurry-text/front.png",
+        "back": "tampered/coughcalm__blurry-text/back.png",
+        "batch": "tampered/coughcalm__blurry-text/batch.png"
+      }
+    },
+    {
+      "id": "coughcalm__wrong-batch-format",
+      "product_id": "coughcalm",
+      "variant": "wrong-batch-format",
+      "tamper_type": "wrong_batch_format",
+      "expected_verdict": "suspicious",
+      "reference_image": "coughcalm",
+      "mutation": {
+        "batch": "CC/25/B04"
+      },
+      "images": {
+        "front": "tampered/coughcalm__wrong-batch-format/front.png",
+        "back": "tampered/coughcalm__wrong-batch-format/back.png",
+        "batch": "tampered/coughcalm__wrong-batch-format/batch.png"
+      }
+    },
+    {
+      "id": "coughcalm__invalid-barcode",
+      "product_id": "coughcalm",
+      "variant": "invalid-barcode",
+      "tamper_type": "invalid_barcode_checksum",
+      "expected_verdict": "suspicious",
+      "reference_image": "coughcalm",
+      "mutation": {
+        "bad_barcode": true
+      },
+      "images": {
+        "front": "tampered/coughcalm__invalid-barcode/front.png",
+        "back": "tampered/coughcalm__invalid-barcode/back.png",
+        "batch": "tampered/coughcalm__invalid-barcode/batch.png"
+      }
+    },
+    {
+      "id": "glucobalance__authentic",
+      "product_id": "glucobalance",
+      "variant": "authentic",
+      "tamper_type": null,
+      "expected_verdict": "consistent",
+      "reference_image": "glucobalance",
+      "images": {
+        "front": "reference/glucobalance/front.png",
+        "back": "reference/glucobalance/back.png",
+        "batch": "reference/glucobalance/batch.png"
+      }
+    },
+    {
+      "id": "glucobalance__typo-name",
+      "product_id": "glucobalance",
+      "variant": "typo-name",
+      "tamper_type": "typo_in_brand_name",
+      "expected_verdict": "suspicious",
+      "reference_image": "glucobalance",
+      "mutation": {
+        "display_name": "GlucoBallans"
+      },
+      "images": {
+        "front": "tampered/glucobalance__typo-name/front.png",
+        "back": "tampered/glucobalance__typo-name/back.png",
+        "batch": "tampered/glucobalance__typo-name/batch.png"
+      }
+    },
+    {
+      "id": "glucobalance__expired-date",
+      "product_id": "glucobalance",
+      "variant": "expired-date",
+      "tamper_type": "expired_date",
+      "expected_verdict": "suspicious",
+      "reference_image": "glucobalance",
+      "mutation": {
+        "exp": "06/2024"
+      },
+      "images": {
+        "front": "tampered/glucobalance__expired-date/front.png",
+        "back": "tampered/glucobalance__expired-date/back.png",
+        "batch": "tampered/glucobalance__expired-date/batch.png"
+      }
+    },
+    {
+      "id": "glucobalance__missing-registration",
+      "product_id": "glucobalance",
+      "variant": "missing-registration",
+      "tamper_type": "missing_registration_number",
+      "expected_verdict": "suspicious",
+      "reference_image": "glucobalance",
+      "mutation": {
+        "reg_no": null
+      },
+      "images": {
+        "front": "tampered/glucobalance__missing-registration/front.png",
+        "back": "tampered/glucobalance__missing-registration/back.png",
+        "batch": "tampered/glucobalance__missing-registration/batch.png"
+      }
+    },
+    {
+      "id": "allerfree__authentic",
+      "product_id": "allerfree",
+      "variant": "authentic",
+      "tamper_type": null,
+      "expected_verdict": "consistent",
+      "reference_image": "allerfree",
+      "images": {
+        "front": "reference/allerfree/front.png",
+        "back": "reference/allerfree/back.png",
+        "batch": "reference/allerfree/batch.png"
+      }
+    },
+    {
+      "id": "allerfree__wrong-color",
+      "product_id": "allerfree",
+      "variant": "wrong-color",
+      "tamper_type": "wrong_colour",
+      "expected_verdict": "suspicious",
+      "reference_image": "allerfree",
+      "mutation": {
+        "color": "#4D7C0F"
+      },
+      "images": {
+        "front": "tampered/allerfree__wrong-color/front.png",
+        "back": "tampered/allerfree__wrong-color/back.png",
+        "batch": "tampered/allerfree__wrong-color/batch.png"
+      }
+    },
+    {
+      "id": "allerfree__invalid-barcode",
+      "product_id": "allerfree",
+      "variant": "invalid-barcode",
+      "tamper_type": "invalid_barcode_checksum",
+      "expected_verdict": "suspicious",
+      "reference_image": "allerfree",
+      "mutation": {
+        "bad_barcode": true
+      },
+      "images": {
+        "front": "tampered/allerfree__invalid-barcode/front.png",
+        "back": "tampered/allerfree__invalid-barcode/back.png",
+        "batch": "tampered/allerfree__invalid-barcode/batch.png"
+      }
+    },
+    {
+      "id": "allerfree__wrong-batch-format",
+      "product_id": "allerfree",
+      "variant": "wrong-batch-format",
+      "tamper_type": "wrong_batch_format",
+      "expected_verdict": "suspicious",
+      "reference_image": "allerfree",
+      "mutation": {
+        "batch": "AF2025X08"
+      },
+      "images": {
+        "front": "tampered/allerfree__wrong-batch-format/front.png",
+        "back": "tampered/allerfree__wrong-batch-format/back.png",
+        "batch": "tampered/allerfree__wrong-batch-format/batch.png"
+      }
+    },
+    {
+      "id": "cardiosafe__authentic",
+      "product_id": "cardiosafe",
+      "variant": "authentic",
+      "tamper_type": null,
+      "expected_verdict": "consistent",
+      "reference_image": "cardiosafe",
+      "images": {
+        "front": "reference/cardiosafe/front.png",
+        "back": "reference/cardiosafe/back.png",
+        "batch": "reference/cardiosafe/batch.png"
+      }
+    },
+    {
+      "id": "cardiosafe__blurry-text",
+      "product_id": "cardiosafe",
+      "variant": "blurry-text",
+      "tamper_type": "blurry_print",
+      "expected_verdict": "suspicious",
+      "reference_image": "cardiosafe",
+      "mutation": {
+        "blur": 1.7
+      },
+      "images": {
+        "front": "tampered/cardiosafe__blurry-text/front.png",
+        "back": "tampered/cardiosafe__blurry-text/back.png",
+        "batch": "tampered/cardiosafe__blurry-text/batch.png"
+      }
+    },
+    {
+      "id": "cardiosafe__missing-registration",
+      "product_id": "cardiosafe",
+      "variant": "missing-registration",
+      "tamper_type": "missing_registration_number",
+      "expected_verdict": "suspicious",
+      "reference_image": "cardiosafe",
+      "mutation": {
+        "reg_no": null
+      },
+      "images": {
+        "front": "tampered/cardiosafe__missing-registration/front.png",
+        "back": "tampered/cardiosafe__missing-registration/back.png",
+        "batch": "tampered/cardiosafe__missing-registration/batch.png"
+      }
+    },
+    {
+      "id": "cardiosafe__expired-date",
+      "product_id": "cardiosafe",
+      "variant": "expired-date",
+      "tamper_type": "expired_date",
+      "expected_verdict": "suspicious",
+      "reference_image": "cardiosafe",
+      "mutation": {
+        "exp": "09/2023"
+      },
+      "images": {
+        "front": "tampered/cardiosafe__expired-date/front.png",
+        "back": "tampered/cardiosafe__expired-date/back.png",
+        "batch": "tampered/cardiosafe__expired-date/batch.png"
+      }
+    }
+  ]
+}

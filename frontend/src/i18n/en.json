@@ -1,0 +1,831 @@
+{
+  "app": {
+    "name": "DawaiCheck",
+    "tagline": "Packaging screening for medicine boxes",
+    "shortDisclaimer": "Packaging screening only - not proof that a medicine is genuine or safe.",
+    "disclaimer": "This is a packaging screening aid, not a laboratory test. If in doubt, confirm with a licensed pharmacist or the Drug Regulatory Authority of Pakistan (DRAP).",
+    "offline": "You're offline. Saved results still open, but new scans need a connection.",
+    "demoData": "DEMO DATA",
+    "localOnly": "History stays in this browser and is never synced."
+  },
+  "nav": {
+    "home": "Home",
+    "scan": "Scan",
+    "history": "History",
+    "info": "How it works",
+    "skip": "Skip to main content"
+  },
+  "actions": {
+    "back": "Back",
+    "next": "Next",
+    "cancel": "Cancel",
+    "close": "Close",
+    "save": "Save",
+    "delete": "Delete",
+    "retake": "Retake",
+    "continue": "Continue",
+    "done": "Done",
+    "retry": "Try again",
+    "share": "Share",
+    "copy": "Copy",
+    "copied": "Copied",
+    "download": "Download",
+    "edit": "Edit",
+    "refresh": "Refresh",
+    "skip": "Skip",
+    "usePhoto": "Use this photo",
+    "takePhoto": "Take photo",
+    "upload": "Upload photo",
+    "deviceCamera": "Device camera",
+    "openCamera": "Open camera",
+    "closeCamera": "Close camera",
+    "switchCamera": "Switch camera",
+    "confirm": "Confirm",
+    "learnMore": "Learn more",
+    "viewAll": "View all",
+    "gotIt": "Got it",
+    "analyze": "Analyze packaging",
+    "saveLocally": "Save on this device",
+    "remove": "Remove",
+    "view": "View",
+    "useDemo": "Use a demo pack"
+  },
+  "language": {
+    "english": "English",
+    "urdu": "اردو",
+    "switchToUrdu": "Switch to Urdu",
+    "switchToEnglish": "Switch to English",
+    "label": "Language"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "toDark": "Switch to dark theme",
+    "toLight": "Switch to light theme",
+    "label": "Theme"
+  },
+  "status": {
+    "pass": "Pass",
+    "warn": "Warning",
+    "fail": "Failed",
+    "unknown": "Not checked"
+  },
+  "confidence": {
+    "title": "Confidence",
+    "reason": "Why this confidence",
+    "low": {
+      "label": "Low",
+      "quality_failed": "The photos were too poor to screen reliably.",
+      "no_reference": "No reference packaging matched, so visual checks were limited.",
+      "ocr_failed": "Text could not be read reliably from these photos."
+    },
+    "medium": {
+      "label": "Medium",
+      "partial_evidence": "Some checks were skipped or the photos had minor quality issues.",
+      "some_uncertainty": "The reference matched, but some evidence is less certain."
+    },
+    "high": {
+      "label": "High",
+      "matched_reference": "A reference matched by barcode and the photos were clear."
+    }
+  },
+  "onboarding": {
+    "skip": "Skip for now",
+    "next": "Next",
+    "start": "Start checking",
+    "step": "Step {{current}} of {{total}}",
+    "privacyNote": "Your photos are sent only to the screening service for analysis. Nothing is saved unless you choose to save it.",
+    "slide1Title": "Check the pack, not just the medicine.",
+    "slide1Body": "DawaiCheck compares packaging details and artwork with reference examples to show warning signs.",
+    "slide1Note": "It never proves a medicine is genuine or safe.",
+    "slide2Title": "Three clear photos",
+    "slide2Body": "Front, back and the batch/expiry panel. Good light and a steady hand make a real difference.",
+    "slide3Title": "Know the limits",
+    "slide3Body": "Packaging checks cannot detect what is inside a pill. When in doubt, ask a licensed pharmacist or DRAP.",
+    "languageHint": "Available in English and Urdu."
+  },
+  "home": {
+    "eyebrow": "Packaging screening",
+    "title": "A second look before you take it.",
+    "subtitle": "Photograph the front, back and batch panel. We check packaging warning signs - not what is inside the medicine.",
+    "scanCta": "Scan a medicine box",
+    "scanHint": "Takes about 10-20 seconds",
+    "demoCta": "Try a demo pack",
+    "trust": {
+      "noAccount": "No account needed",
+      "consent": "You choose what to save",
+      "bilingual": "English and اردو"
+    },
+    "recent": {
+      "title": "Recent results",
+      "empty": "Nothing saved yet. Your saved results will appear here.",
+      "viewAll": "View all saved results",
+      "saved": "Saved"
+    },
+    "how": {
+      "title": "What DawaiCheck looks at",
+      "subtitle": "A quick packaging check with visible limits.",
+      "step1Title": "Barcode, dates and batch",
+      "step1Body": "Checks the GTIN, printed expiry, date order and batch format.",
+      "step2Title": "Registration and spelling",
+      "step2Body": "Looks up a local demo registry and compares the printed name with a reference.",
+      "step3Title": "Artwork and print",
+      "step3Body": "Compares colour, layout and sharpness. It can flag differences, not prove tampering.",
+      "link": "See all checks and limits"
+    },
+    "limits": {
+      "title": "Packaging can be checked. What's inside cannot.",
+      "body": "DawaiCheck cannot detect counterfeit ingredients or prove a medicine is safe. A consistent-looking box is not a guarantee.",
+      "link": "Know the limits"
+    },
+    "demo": {
+      "title": "Built-in reference data is fictional",
+      "body": "The reference packs and registration records in this build are DEMO data. They are not real DRAP registrations.",
+      "short": "DEMO reference data"
+    },
+    "footer": "An independent packaging screening aid for Pakistan."
+  },
+  "demo": {
+    "use": "Demo pack",
+    "badge": "Synthetic demo",
+    "pickerTitle": "Try a synthetic demo pack",
+    "pickerBody": "No medicine box nearby? These generated packs exercise the checks. They are not real medicines.",
+    "loading": "Loading demo photos.",
+    "loadError": "The demo photos could not be loaded. Try again.",
+    "authentic": "Consistent demo pack",
+    "authenticHint": "Clear packaging with matching reference data",
+    "typo": "Misspelled demo pack",
+    "typoHint": "Brand name differs from the reference",
+    "expired": "Expired-date demo pack",
+    "expiredHint": "Printed expiry is in the past",
+    "wrongColor": "Wrong-colour demo pack",
+    "wrongColorHint": "Front colour differs from the reference"
+  },
+  "capture": {
+    "title": "Photograph the pack",
+    "subtitle": "Three required photos. Use good light and keep the text sharp.",
+    "progress": "Step {{current}} of {{total}}",
+    "required": "Required",
+    "optional": "Optional",
+    "uploadHint": "JPG or PNG - up to 15 MB",
+    "missing": "Take the front, back and batch photos to continue.",
+    "analyze": "Analyze packaging",
+    "skipBlister": "Skip and analyze",
+    "changePhoto": "Change photo",
+    "photoAdded": "Photo added.",
+    "removePhoto": "Remove photo",
+    "readyTitle": "Ready to analyze",
+    "readyBody": "The three required photos are ready. You can add an optional blister photo or start the check.",
+    "error": "That image could not be read. Try another JPG or PNG.",
+    "offline": "You are offline. A new scan needs the screening service.",
+    "addOptional": "Add optional blister photo",
+    "steps": {
+      "front": {
+        "label": "Front",
+        "title": "Front of the pack",
+        "instruction": "Fill the frame with the full front. Keep the brand name sharp.",
+        "frame": "Align the pack inside the frame"
+      },
+      "back": {
+        "label": "Back",
+        "title": "Back or side panel",
+        "instruction": "Capture the text panel, ingredients and manufacturer details.",
+        "frame": "Keep the text panel inside the frame"
+      },
+      "batch": {
+        "label": "Batch & expiry",
+        "title": "Batch and expiry panel",
+        "instruction": "Close-up of the printed batch number and expiry date.",
+        "frame": "Keep the batch and expiry text inside the frame"
+      },
+      "blister": {
+        "label": "Blister",
+        "title": "Blister or strip",
+        "instruction": "Optional. Capture the blister or strip for a fuller record.",
+        "frame": "Keep the blister inside the frame"
+      }
+    },
+    "camera": {
+      "starting": "Starting camera.",
+      "live": "Live",
+      "permissionTitle": "Camera access is needed",
+      "permissionBody": "Allow camera access to see a live preview. You can also upload a photo or use your device camera.",
+      "denied": "Camera access was denied. Allow it in your browser settings, or upload a photo instead.",
+      "unavailable": "Live camera is not available in this browser. Use Upload photo or Device camera.",
+      "insecure": "Live camera needs HTTPS or localhost. Use Upload photo or Device camera instead.",
+      "error": "The camera could not start. You can still upload a photo.",
+      "liveGood": "Good light",
+      "liveDark": "Too dark - add light",
+      "liveBright": "Too bright - avoid glare",
+      "facing": "Camera: {{facing}}",
+      "back": "back",
+      "front": "front"
+    },
+    "quality": {
+      "checking": "Checking photo.",
+      "pass": "Photo quality looks good.",
+      "warn": "Usable, but quality could be better.",
+      "fail": "This photo is too poor to analyze.",
+      "retakeTitle": "Please retake this photo",
+      "retakeBody": "A clearer photo will make the check more reliable.",
+      "useAnyway": "Use this photo anyway"
+    },
+    "tips": {
+      "title": "Photo tips",
+      "light": "Use bright, even light and avoid glare.",
+      "fill": "Fill the frame and keep the text in focus.",
+      "flat": "Hold the box flat and steady.",
+      "clean": "Avoid fingers or shadows covering printed details."
+    }
+  },
+  "analyzing": {
+    "title": "Checking the packaging",
+    "subtitle": "This usually takes 10-20 seconds. Keep this screen open.",
+    "steps": {
+      "photo": "Assessing photo quality",
+      "barcode": "Reading barcode and codes",
+      "text": "Reading printed text",
+      "reference": "Comparing with reference",
+      "scoring": "Scoring the checks"
+    },
+    "warning": "Photos are used only for this analysis and are not posted anywhere automatically.",
+    "cancel": "Cancel analysis",
+    "errorTitle": "The analysis didn't finish",
+    "errorBody": "The screening service could not complete this check. Try again.",
+    "errorMissing": "The photos are no longer available. Please retake them.",
+    "networkTitle": "Can't reach the screening service",
+    "networkBody": "Check that the backend is running, then try again.",
+    "retry": "Try again",
+    "backToScan": "Back to photos"
+  },
+  "quality": {
+    "title": "Photo quality",
+    "hint": "Photo quality is checked before analysis. Poor photos lower confidence.",
+    "view": {
+      "front": "Front",
+      "back": "Back",
+      "batch": "Batch",
+      "blister": "Blister"
+    },
+    "status": {
+      "ok": "Good",
+      "warn": "Usable",
+      "fail": "Retake needed"
+    },
+    "issues": {
+      "too_small": "Too small ({{actual}} px; at least {{min}} px needed).",
+      "too_blurry": "Too blurry. Hold the camera steady and tap to focus.",
+      "slightly_blurry": "Slightly soft. Try again with a steadier hand.",
+      "too_dark": "Too dark to read the print (brightness {{brightness}}). Add more light.",
+      "dark": "A little dark (brightness {{brightness}}). Move toward better light.",
+      "overexposed": "Overexposed (brightness {{brightness}}). Avoid direct light or flash.",
+      "bright": "Very bright (brightness {{brightness}}). Check for glare.",
+      "glare": "Heavy glare ({{ratio}} of the image). Tilt the pack away from the light.",
+      "glare_risk": "Some glare ({{ratio}} of the image). Tilt the pack slightly.",
+      "low_contrast": "Low contrast ({{contrast}}). Use a plain background and better light.",
+      "flat_contrast": "Flat contrast ({{contrast}}). Better light may help."
+    },
+    "localIssues": {
+      "too_small": "The photo is too small. Move closer and use a higher resolution.",
+      "too_blurry": "The photo is too blurry. Hold the camera steady.",
+      "slightly_blurry": "The photo is slightly soft. Try again with a steadier hand.",
+      "too_dark": "The photo is too dark. Add more light.",
+      "dark": "The photo is a little dark. Move toward better light.",
+      "overexposed": "The photo is overexposed. Avoid direct light or flash.",
+      "bright": "The photo is very bright. Check for glare.",
+      "glare": "There is heavy glare. Tilt the pack away from the light.",
+      "glare_risk": "There is some glare. Tilt the pack slightly.",
+      "low_contrast": "Low contrast. Use a plain background and better light.",
+      "flat_contrast": "Flat contrast. Better light may help."
+    }
+  },
+  "result": {
+    "title": "Screening result",
+    "checkedOn": "Checked {{date}}",
+    "savedChip": "Saved on this device",
+    "disclaimerLabel": "Important",
+    "verdict": {
+      "consistent": {
+        "title": "Looks consistent",
+        "subtitle": "The packaging matched the reference on the checks that could run.",
+        "note": "This does not mean the medicine is genuine or safe."
+      },
+      "suspicious": {
+        "title": "Suspicious packaging",
+        "subtitle": "One or more packaging checks raised a serious warning.",
+        "note": "Do not use the pack until a licensed pharmacist checks it."
+      },
+      "undetermined": {
+        "title": "Undetermined",
+        "subtitle": "We could not gather enough reliable evidence.",
+        "note": "Retake clearer photos or ask a pharmacist."
+      }
+    },
+    "labels": {
+      "consistent": "Consistent",
+      "suspicious": "Suspicious",
+      "undetermined": "Undetermined"
+    },
+    "risk": {
+      "title": "Packaging risk score",
+      "outOf": "of 100",
+      "hint": "Not a probability. A higher score means more packaging warning signs.",
+      "band": {
+        "low": "Few warning signs",
+        "medium": "Some warning signs",
+        "high": "Several warning signs"
+      }
+    },
+    "confidence": {
+      "title": "Confidence",
+      "reason": "Why this confidence"
+    },
+    "reference": {
+      "title": "Reference",
+      "match": "Match",
+      "demo": "DEMO reference",
+      "none": "No reference packaging matched",
+      "noneBody": "Visual and spelling checks are limited without a reference pack.",
+      "name": "Reference product",
+      "strength": "Strength",
+      "manufacturer": "Manufacturer",
+      "registration": "Registration",
+      "barcode": "Barcode"
+    },
+    "checks": {
+      "title": "Packaging checks",
+      "hint": "Tap a check for its explanation. Unknown checks lower confidence.",
+      "points": "{{points}} of {{weight}} risk points",
+      "weightZero": "Quality gate",
+      "confidence": "{{percent}}% confidence",
+      "why": "Why it matters",
+      "showAll": "Show all {{count}} checks",
+      "showLess": "Show fewer checks"
+    },
+    "comparison": {
+      "title": "Visual comparison",
+      "hint": "Drag the slider. Highlighted boxes mark areas of difference, not proof of tampering.",
+      "reference": "Reference",
+      "photo": "Your photo",
+      "overlay": "Difference heatmap",
+      "showOverlay": "Show difference heatmap",
+      "showComparison": "Back to side-by-side",
+      "none": "No visual comparison is available for this pack.",
+      "aligned": "Aligned",
+      "resize": "Roughly aligned",
+      "similarity": "Similarity {{percent}}%",
+      "flagged": "Flagged areas: {{count}}",
+      "regions": "Difference areas: {{count}}",
+      "noRegions": "No significant difference areas were detected.",
+      "sliderLabel": "Drag to compare reference and your photo"
+    },
+    "fields": {
+      "title": "Printed details",
+      "hint": "OCR can misread print. Correct anything wrong before re-checking.",
+      "edit": "Correct details",
+      "save": "Done editing",
+      "cancel": "Cancel editing",
+      "recheck": "Re-check with these details",
+      "rechecking": "Re-checking.",
+      "empty": "Not found",
+      "rerunInfo": "Corrected details will be used for a new analysis.",
+      "rerunError": "The re-check did not finish. Your edits are still here."
+    },
+    "quality": {
+      "title": "Photo quality details",
+      "hint": "Quality issues found in each submitted photo."
+    },
+    "notices": {
+      "title": "Important notes"
+    },
+    "actions": {
+      "title": "What you can do",
+      "report": "View screening report",
+      "save": "Save to history",
+      "saved": "Saved",
+      "share": "Share result",
+      "retake": "Retake photos",
+      "pharmacist": "Ask a pharmacist",
+      "newScan": "New scan"
+    },
+    "share": {
+      "success": "Result summary shared.",
+      "copied": "Result summary copied to the clipboard.",
+      "error": "Could not share. Your browser may not support sharing.",
+      "title": "DawaiCheck result"
+    },
+    "pharmacist": {
+      "title": "Ask a licensed pharmacist",
+      "body": "Show the pack and this result to a licensed pharmacist. They can inspect the packaging in person and advise you.",
+      "drap": "If you suspect a counterfeit, contact the Drug Regulatory Authority of Pakistan (DRAP). Keep the pack, photos and receipt.",
+      "urgent": "If you have taken the medicine and feel unwell, seek medical care.",
+      "close": "Understood"
+    },
+    "scoring": {
+      "title": "How the risk score works",
+      "body": "Each check has a fixed weight. A failed check adds its full weight; a warning adds half. Photo quality is a gate, not a score. Unknown checks add no points but lower confidence.",
+      "threshold": "A failed check or 15+ risk points makes the result suspicious. Without a reference, the result is undetermined.",
+      "version": "Scoring version {{version}}",
+      "button": "How the score works"
+    },
+    "saveDialog": {
+      "title": "Save this result on this device?",
+      "body": "Saving stores this result and your photos in this browser only. Nothing is synced or uploaded to a history server. You can delete it at any time.",
+      "accept": "Save on this device",
+      "decline": "Don't save",
+      "success": "Result saved on this device.",
+      "error": "The result could not be saved. Browser storage may be full.",
+      "alreadySaved": "This result is already saved."
+    },
+    "notFound": {
+      "title": "No result to show",
+      "body": "Open a saved result or scan a pack to see a screening result here.",
+      "cta": "Scan a pack"
+    },
+    "demoNotice": "This result uses DEMO reference data."
+  },
+  "fields": {
+    "product_name": "Product name",
+    "strength": "Strength",
+    "manufacturer": "Manufacturer",
+    "registration_number": "Registration number",
+    "batch_number": "Batch number",
+    "manufacturing_date": "Manufacturing date",
+    "expiry_date": "Expiry date",
+    "barcode": "Barcode"
+  },
+  "checks": {
+    "photo_quality": {
+      "title": "Photo quality",
+      "why": "Blur, darkness or glare can cause every other check to be less reliable.",
+      "failed": "One or more photos are too poor to analyze. Retake them using the specific tips below.",
+      "warnings": "Photos are usable, but quality warnings may reduce confidence.",
+      "passed": "Photos are sharp enough and well lit for packaging screening."
+    },
+    "expiry": {
+      "title": "Expiry date",
+      "why": "An expired medicine should not be used, no matter how genuine the box appears.",
+      "missing": "No expiry date was found. A carton without a readable expiry date should be verified.",
+      "unreadable": "An expiry date was found but could not be read reliably.",
+      "expired": "The printed expiry date ({{date}}) is in the past.",
+      "expiring_soon": "The printed expiry date ({{date}}) is close. Confirm with a pharmacist.",
+      "valid": "The printed expiry date ({{date}}) is in the future."
+    },
+    "dates": {
+      "title": "Manufacturing and expiry dates",
+      "why": "The manufacturing and expiry dates should be in a believable order and shelf life.",
+      "missing_mfg": "No manufacturing date was found, so the shelf life could not be checked.",
+      "unreadable_mfg": "The manufacturing date could not be read reliably.",
+      "missing_exp": "The expiry date could not be read, so the date order was not checked.",
+      "order": "The manufacturing date is not before the expiry date.",
+      "short_shelf_life": "The printed shelf life is unusually short ({{months}} months).",
+      "long_shelf_life": "The printed shelf life is unusually long ({{months}} months).",
+      "valid": "The manufacturing and expiry dates are in a believable order ({{months}}-month shelf life)."
+    },
+    "batch_format": {
+      "title": "Batch number format",
+      "why": "A batch number that does not match the product's known format is a warning sign.",
+      "missing": "No batch number was found on the packaging.",
+      "invalid_reference_rule": "The reference batch format rule is invalid, so this check could not run.",
+      "matches_ocr": "The batch number matches the known format after common OCR character corrections.",
+      "matches": "The batch number matches the known format for this product.",
+      "mismatch": "The printed batch number does not match the known format for this product.",
+      "plausible": "A batch number is present and looks plausible. No format is known for this product.",
+      "unusual": "A batch number is present but its format looks unusual."
+    },
+    "barcode": {
+      "title": "Barcode and GTIN",
+      "why": "A valid GTIN check digit and the expected company prefix are useful packaging evidence.",
+      "missing": "No barcode was detected in these photos.",
+      "invalid_checksum": "The barcode number is not valid: its GTIN check digit does not match.",
+      "prefix_mismatch": "The barcode does not match the company prefix for this product.",
+      "matches_reference": "The barcode check digit is valid and its company prefix matches the reference.",
+      "valid_no_reference": "The barcode check digit is valid. No reference prefix is available to compare.",
+      "non_gtin": "A code was found, but it is not a GTIN/EAN number that can be validated."
+    },
+    "registration": {
+      "title": "Registration number",
+      "why": "A registration number is only meaningful if it can be checked against a reliable registry.",
+      "missing": "No registration number was found on the packaging.",
+      "registry_unavailable": "The registration number is present, but no real registry is connected.",
+      "not_found_demo": "The registration number was not found in the local DEMO registry (which is not real DRAP data).",
+      "not_found": "The registration number was not found in the configured registry.",
+      "found_but_unexpected": "The registration number was found, but its format or registered product name does not fully match this pack.",
+      "found_demo": "The number appears in the local DEMO registry (not real DRAP data) as {{registry_name}}.",
+      "found": "The number was found in the configured registry as {{registry_name}}."
+    },
+    "spelling": {
+      "title": "Product name and spelling",
+      "why": "Small spelling changes are a common warning sign of counterfeit packaging.",
+      "no_reference": "No reference name is available, so spelling could not be compared.",
+      "product_missing": "The product name could not be read confidently, so spelling was not fully compared.",
+      "matches": "The product name and manufacturer closely match the reference.",
+      "product_mismatch": "The printed name \"{{ocr_name}}\" is substantially different from the reference \"{{reference_name}}\".",
+      "manufacturer_mismatch": "The manufacturer name differs noticeably from the reference packaging.",
+      "close_but_differs": "The printed name \"{{ocr_name}}\" is close to, but not an exact match for, the reference \"{{reference_name}}\"."
+    },
+    "visual": {
+      "title": "Packaging artwork",
+      "why": "Colour, layout and artwork differences can indicate a different or altered pack.",
+      "no_reference": "No reference packaging is available, so visual similarity could not be compared.",
+      "comparison_unavailable": "The visual comparison could not be completed for these photos.",
+      "fail": "The packaging artwork differs substantially from the reference image.",
+      "warn": "The packaging mostly resembles the reference, but some visual elements differ.",
+      "pass": "The packaging artwork closely resembles the reference image."
+    },
+    "print_quality": {
+      "title": "Print quality",
+      "why": "Soft or uneven print can be a warning sign, although cameras and lighting can also affect it.",
+      "no_reference": "No reference packaging is available to compare print sharpness.",
+      "unavailable": "Print sharpness could not be compared with the reference.",
+      "warn": "Printed text looks less sharp than the reference. This is a warning only, not proof of tampering.",
+      "pass": "Print sharpness is broadly similar to the reference packaging."
+    },
+    "common": {
+      "quality_retake": "Not evaluated because the photos did not pass the image quality gate.",
+      "ocr_failed": "Not evaluated because printed text could not be read."
+    }
+  },
+  "notices": {
+    "demo_reference": "Reference library: DEMO DATA - these are fictional packages, not real medicine registrations.",
+    "demo_registry": "Registration lookup uses a local DEMO CSV. It is not connected to DRAP and must not be treated as a real registration check.",
+    "registry_unavailable": "No real registry adapter is configured, so registration lookup is unavailable.",
+    "registry_configured": "Registration lookup uses the configured registry.",
+    "no_reference": "No reference packaging matched this product. Visual and spelling checks are limited, and confidence is lower.",
+    "overrides_applied": "Your corrected details were used for this re-check.",
+    "vision_llm_used": "Low-confidence OCR fields were supplemented by the optional vision model.",
+    "vision_llm_failed": "The optional vision model was unavailable; on-device OCR results were used.",
+    "quality_failed": "The photos were too poor to screen. Retake them using the tips on each capture step.",
+    "quality_warnings": "Some photos had quality warnings. Results are usable, but confidence may be lower.",
+    "ocr_failed": "Text could not be read from these photos. Retake them in good light and hold the camera steady."
+  },
+  "reference": {
+    "match": {
+      "barcode": "Matched by barcode",
+      "name": "Matched by product name",
+      "explicit": "Reference selected manually",
+      "none": "No reference match"
+    }
+  },
+  "regions": {
+    "brand_area": "Brand or headline area",
+    "text_area": "Printed text area",
+    "regulatory_area": "Batch, expiry or regulatory area"
+  },
+  "history": {
+    "title": "Saved results",
+    "subtitle": "Stored only in this browser, with your consent.",
+    "count": "Saved results: {{count}}",
+    "empty": {
+      "title": "No saved results yet",
+      "body": "After a scan, choose Save to history. Nothing is saved automatically.",
+      "cta": "Scan a medicine box"
+    },
+    "unnamed": "Medicine pack",
+    "savedOn": "Saved {{date}}",
+    "risk": "Risk {{score}} / 100",
+    "open": "View result",
+    "delete": "Delete",
+    "deleteDialog": {
+      "title": "Delete this saved result?",
+      "body": "This removes the result and photos from this browser. It cannot be undone.",
+      "confirm": "Delete result",
+      "success": "Saved result deleted."
+    },
+    "deleteAll": "Delete all saved data",
+    "deleteAllDialog": {
+      "title": "Delete all saved results?",
+      "body": "This removes every saved result and photo from this browser. It cannot be undone. Your language and theme settings stay.",
+      "confirm": "Delete everything",
+      "success": "All saved results deleted."
+    },
+    "localOnly": "History stays in this browser. The app does not sync or upload it.",
+    "loadError": "Saved results could not be loaded.",
+    "retry": "Try again",
+    "viewed": "Saved result"
+  },
+  "report": {
+    "title": "Packaging screening summary",
+    "summaryTitle": "DawaiCheck packaging screening summary",
+    "subtitle": "Review, share or download. Nothing is sent automatically.",
+    "back": "Back to result",
+    "notOfficial": "Not an official DRAP document.",
+    "noUpload": "You control sharing. DawaiCheck does not upload this report.",
+    "demo": "This summary is based on DEMO reference data.",
+    "timestamp": "Screened",
+    "verdict": "Verdict",
+    "productName": "Product",
+    "batch": "Batch",
+    "expiry": "Expiry",
+    "registration": "Registration",
+    "reference": "Reference",
+    "score": "Risk score",
+    "screened": "Screened",
+    "checksTitle": "Checks",
+    "failedTitle": "Failed checks",
+    "warnedTitle": "Warning checks",
+    "noIssues": "No failed or warning checks.",
+    "notChecked": "Not checked",
+    "photos": "Photos",
+    "photoFront": "Front",
+    "photoBack": "Back",
+    "photoBatch": "Batch panel",
+    "photoBlister": "Blister",
+    "copySummary": "Copy summary",
+    "shareSummary": "Share summary",
+    "downloadPdf": "Download PDF",
+    "pdfEnglishNote": "The PDF is generated in English.",
+    "copySuccess": "Summary copied to the clipboard.",
+    "shareSuccess": "Summary shared.",
+    "error": "The report could not be prepared.",
+    "empty": {
+      "title": "No result to report",
+      "body": "Scan a pack or open a saved result first.",
+      "cta": "Scan a pack"
+    },
+    "fieldLabels": {
+      "product": "Product",
+      "batch": "Batch",
+      "expiry": "Expiry",
+      "registration": "Registration"
+    }
+  },
+  "pdf": {
+    "title": "DawaiCheck - packaging screening summary",
+    "screened": "Screened",
+    "verdict": "Verdict",
+    "score": "Packaging risk score",
+    "confidence": "Confidence",
+    "details": "Printed details",
+    "product": "Product",
+    "strength": "Strength",
+    "manufacturer": "Manufacturer",
+    "registration": "Registration",
+    "batch": "Batch",
+    "expiry": "Expiry",
+    "barcode": "Barcode",
+    "reference": "Reference",
+    "findings": "Checks",
+    "check": "Check",
+    "status": "Status",
+    "riskPoints": "Risk points",
+    "photos": "Photos",
+    "front": "Front",
+    "back": "Back",
+    "batchPhoto": "Batch panel",
+    "blisterPhoto": "Blister",
+    "noPhotos": "Photo could not be added",
+    "disclaimer": "Important: this is a packaging screening aid, not a laboratory test. It never proves a medicine is genuine or safe. If in doubt, confirm with a licensed pharmacist or the Drug Regulatory Authority of Pakistan (DRAP).",
+    "demo": "This report is based on DEMO reference data, not real DRAP registrations.",
+    "generated": "Generated",
+    "page": "Page",
+    "notOfficial": "Not an official DRAP document",
+    "footerNote": "DawaiCheck - packaging screening only, never a safety or genuineness test."
+  },
+  "admin": {
+    "gate": {
+      "title": "Reference lab (demo)",
+      "body": "This hidden area is for demo setup and testing. The consumer flow only uses it through reference matching.",
+      "toggle": "Enable reference tools",
+      "hint": "Admin tools are not needed for normal scanning.",
+      "open": "Open reference library"
+    },
+    "title": "Reference library",
+    "subtitle": "DEMO DATA - fictional reference packs only.",
+    "back": "Back to how it works",
+    "demoNotice": "Built-in references are fictional demo data. Do not present them as real medicines or DRAP registrations.",
+    "add": {
+      "title": "Add a reference pack",
+      "subtitle": "All fields are stored on the local backend.",
+      "name": "Product name",
+      "strength": "Strength",
+      "manufacturer": "Manufacturer",
+      "registration": "Registration number",
+      "barcode": "Barcode (GTIN)",
+      "barcodePrefix": "Barcode company prefix",
+      "batchRegex": "Batch format regex",
+      "regRegex": "Registration format regex",
+      "colorHex": "Brand colour (hex)",
+      "images": "Reference images",
+      "front": "Front image (required)",
+      "back": "Back image",
+      "batch": "Batch image",
+      "submit": "Add reference",
+      "saving": "Adding.",
+      "success": "Reference pack added.",
+      "error": "The reference pack could not be added.",
+      "required": "Name, manufacturer, registration number and a front image are required.",
+      "invalidRegex": "One of the regex patterns is invalid.",
+      "imageError": "One of the images could not be read."
+    },
+    "list": {
+      "title": "Reference packs",
+      "count": "{{count}} packs",
+      "empty": "No reference packs found.",
+      "loading": "Loading reference packs.",
+      "error": "Reference packs could not be loaded.",
+      "retry": "Try again",
+      "refresh": "Refresh"
+    },
+    "badges": {
+      "demo": "Demo",
+      "local": "Local"
+    },
+    "delete": {
+      "button": "Delete",
+      "title": "Delete this reference pack?",
+      "body": "This removes the reference and its images from the backend. Built-in demo packs cannot be deleted.",
+      "confirm": "Delete reference",
+      "success": "Reference deleted.",
+      "error": "The reference could not be deleted.",
+      "demoLocked": "Built-in demo references cannot be deleted."
+    },
+    "form": {
+      "namePlaceholder": "e.g. Demo Paracetamol",
+      "strengthPlaceholder": "e.g. 500 mg",
+      "manufacturerPlaceholder": "e.g. Demo Pharma (Pvt) Ltd",
+      "registrationPlaceholder": "e.g. DEMO-REG-2001",
+      "barcodePlaceholder": "e.g. 2001001000011",
+      "prefixPlaceholder": "e.g. 2001001",
+      "batchRegexPlaceholder": "^DEMO-PC-\\d{4}-[A-Z]\\d{2}$",
+      "regRegexPlaceholder": "^DEMO-REG-\\d{4}$",
+      "colorPlaceholder": "#0F766E"
+    }
+  },
+  "how": {
+    "title": "How DawaiCheck works",
+    "subtitle": "Packaging checks with clear limits.",
+    "whatTitle": "What we check",
+    "what": {
+      "barcode": "Barcode check digit and company prefix",
+      "dates": "Printed expiry and manufacturing dates",
+      "batch": "Batch number format",
+      "registration": "Registration number against a local demo registry",
+      "spelling": "Product name and manufacturer spelling",
+      "visual": "Packaging colour, layout and artwork",
+      "print": "Print sharpness compared with a reference",
+      "quality": "Photo quality before analysis"
+    },
+    "limitsTitle": "What DawaiCheck cannot do",
+    "limits": {
+      "inside": "It cannot detect what is inside the medicine.",
+      "genuine": "It cannot prove that a medicine is genuine.",
+      "safe": "A \"consistent\" result never means a medicine is safe.",
+      "registry": "The built-in registry is demo data, not a DRAP verification.",
+      "visual": "Artwork differences can have innocent causes, such as lighting or a packaging update."
+    },
+    "verdictsTitle": "What the results mean",
+    "verdicts": {
+      "consistent": "No failed check or major warning was found. The packaging still might not be genuine.",
+      "suspicious": "A failed check or enough warning points were found. Verify with a pharmacist.",
+      "undetermined": "The photos or reference were not good enough to decide. Retake photos or ask a pharmacist."
+    },
+    "photosTitle": "Better photos, better checks",
+    "photos": {
+      "light": "Use bright, even light and avoid glare.",
+      "fill": "Fill the frame and keep printed text in focus.",
+      "panel": "Include the batch and expiry panel for every scan."
+    },
+    "privacyTitle": "Privacy and data",
+    "privacyBody": "Photos are sent to the local backend for analysis. Saved results and photos stay in your browser and are removed when you delete them. Nothing is posted automatically.",
+    "drapTitle": "Demo data and DRAP",
+    "drapBody": "All products, manufacturers and registration numbers in the built-in reference library are fictional DEMO data. No live DRAP registry is connected. For a real verification, contact DRAP or a licensed pharmacist.",
+    "demoTitle": "Why DEMO labels appear",
+    "demoBody": "They make it obvious that the app is a working prototype, not an official regulator service.",
+    "scoringTitle": "Transparent scoring",
+    "scoringBody": "The risk score is the sum of weighted packaging checks. A failed check makes the result suspicious. Unknown checks add no points but reduce confidence. The score is not a probability.",
+    "health": {
+      "title": "Service status",
+      "loading": "Checking the screening service.",
+      "online": "Connected - {{engine}} engine, {{count}} reference packs",
+      "offline": "The screening service is not reachable. Start the backend to run new scans.",
+      "demo": "DEMO data mode"
+    },
+    "admin": {
+      "title": "Reference lab",
+      "body": "Add reference packs behind a toggle for demo setup and testing.",
+      "toggle": "Show reference lab link",
+      "open": "Open reference library"
+    },
+    "backHome": "Back to home"
+  },
+  "errors": {
+    "genericTitle": "Something went wrong",
+    "genericBody": "Please try again.",
+    "networkTitle": "Can't reach the screening service",
+    "networkBody": "Check that the backend is running, then try again. Saved results can still be opened offline.",
+    "serverTitle": "The screening service returned an error",
+    "serverBody": "Try again. If it keeps failing, restart the backend.",
+    "cameraDenied": "Camera access was denied. Allow camera access in your browser settings, or upload a photo.",
+    "cameraUnavailable": "Live camera is not available in this browser. Use Upload photo or your device camera.",
+    "imageRead": "That image could not be read. Try a different JPG or PNG.",
+    "offline": "You're offline. A new scan needs the screening service.",
+    "photoRequired": "The front, back and batch photos are required.",
+    "saveFailed": "The result could not be saved.",
+    "reportFailed": "The report could not be prepared.",
+    "loadFailed": "The data could not be loaded.",
+    "notFound": "The requested item was not found.",
+    "notFoundTitle": "Page not found",
+    "notFoundBody": "The page you were looking for does not exist."
+  }
+}

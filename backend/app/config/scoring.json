@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "description": "Transparent risk weights for DawaiCheck. Score = sum(weight * status_factor). 100 means maximum packaging risk. Unknown checks add no risk but lower confidence.",
+  "weights": {
+    "photo_quality": 0,
+    "expiry": 18,
+    "dates": 8,
+    "batch_format": 8,
+    "barcode": 10,
+    "registration": 12,
+    "spelling": 12,
+    "visual": 22,
+    "print_quality": 10
+  },
+  "status_factors": {
+    "pass": 0.0,
+    "warn": 0.5,
+    "fail": 1.0,
+    "unknown": 0.0
+  },
+  "thresholds": {
+    "suspicious_score": 15,
+    "consistent_max_score": 14.99,
+    "expiring_soon_days": 90,
+    "min_shelf_life_months": 6,
+    "max_shelf_life_months": 60
+  }
+}
